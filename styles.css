@@ -124,7 +124,7 @@ nav {
   align-items: center;
   max-width: 650px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .about-me__picture--mask {
@@ -142,6 +142,7 @@ nav {
 
 .about-me__info--title {
   margin-bottom: 16px;
+  transition: all 1s ease-in-out;
 }
 
 .about-me__info--para {
