@@ -37,6 +37,14 @@ a {
   position: relative;
 }
 
+i {
+  transition: opacity 300ms ease-in-out;
+}
+
+i:hover {
+  opacity: 0.7;
+}
+
 .link__hover-effect::after {
   content: "";
   position: absolute;
@@ -166,6 +174,7 @@ nav {
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   margin-bottom: 25px;
+  animation: animate-profile-pic 700ms 200ms backwards;
 }
 
 .about-me__picture {
@@ -174,11 +183,18 @@ nav {
 
 .about-me__info--title {
   margin-bottom: 16px;
+  animation: fade-up 650ms 400ms backwards;
+}
+
+.wave {
+  display: inline-block;
+  animation: animate-wave 700ms infinite ease-in-out;
 }
 
 .about-me__info--para {
   font-size: 20px;
   margin-bottom: 30px;
+  animation: fade-up 650ms 600ms backwards;
 }
 
 .about-me__link {
@@ -187,10 +203,15 @@ nav {
   padding: 0 16px;
 }
 
+.about-me__links {
+  animation: fade-up 650ms 800ms backwards;
+}
+
 .about-me__image--container {
   flex: 1;
   display: flex;
   align-items: center;
+  animation: img-fade-in 650ms 1s backwards;
 }
 
 .about-me__image {
@@ -442,5 +463,53 @@ footer {
   .project__description--sub-title {
     text-align: center;
     margin: 12px;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes animate-profile-pic {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes img-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes animate-wave {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
