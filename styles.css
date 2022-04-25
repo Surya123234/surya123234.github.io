@@ -317,7 +317,7 @@ nav {
 
 .project:hover .project__description {
   opacity: 1;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
 }
 
 .project__list {
